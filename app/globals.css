@@ -5,6 +5,7 @@
   --color-foreground: #ffffff;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-space-grotesk);
 }
 
 body {
@@ -44,4 +45,30 @@ body {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;             /* Chrome/Safari/Edge nuevo */
+}
+
+/* ── Terminal — blinking auto-tip ── */
+.tip-blink {
+  animation: blink 1.4s ease-in-out infinite;
+}
+
+/* ── Tech ticker / marquee ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+/* ── Selected Work — neon glow on hover ── */
+.project-card {
+  transition: box-shadow 0.45s ease, background-color 0.35s ease;
+}
+.project-card:hover {
+  box-shadow:
+    -6px 0 60px rgba(var(--neon-rgb), 0.2),
+    0 0 120px rgba(var(--neon-rgb), 0.04);
 }

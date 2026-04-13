@@ -1,14 +1,21 @@
+"use client";
+
+import { useLang } from "../context/LanguageContext";
+
 export default function HudTopLeft() {
+  const { lang, toggle } = useLang();
+
   return (
     <div className="absolute top-8 left-8 z-10 font-mono text-[11px] uppercase leading-loose text-white/60">
-      <p>johan / qa engineer · ai-driven testing</p>
-      <p className="flex items-center gap-1.5">
-        bogotá, co — status: available
-        <span
-          className="inline-block w-1.5 h-1.5 bg-[#3B82F6] pulse-dot"
-          aria-label="Available status indicator"
-        />
-      </p>
+      <p>Johan Suarez / SDET &amp; Full Stack Dev</p>
+      <p>Bogotá, Colombia</p>
+      <button
+        onClick={toggle}
+        aria-label="Toggle language / Cambiar idioma"
+        className="mt-0.5 text-white/25 hover:text-white/60 transition-colors duration-200 tracking-[0.18em] cursor-pointer"
+      >
+        {lang === "es" ? "[ ES · en ]" : "[ es · EN ]"}
+      </button>
     </div>
   );
 }

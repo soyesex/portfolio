@@ -2,19 +2,23 @@
 
 import { useEffect, useState } from "react";
 
-function getUTCTime(): string {
-  const now = new Date();
-  return now.toISOString().slice(11, 19);
+/** Returns current time in Colombia timezone (COT = UTC-5, no DST) */
+function getCOTTime(): string {
+  return new Date().toLocaleTimeString("en-US", {
+    timeZone: "America/Bogota",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
 }
 
 export default function HudTopRight() {
   const [time, setTime] = useState<string>("");
 
   useEffect(() => {
-    setTime(getUTCTime());
-    const interval = setInterval(() => {
-      setTime(getUTCTime());
-    }, 1000);
+    setTime(getCOTTime());
+    const interval = setInterval(() => setTime(getCOTTime()), 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -23,7 +27,7 @@ export default function HudTopRight() {
       <p className="text-white/60">system telemetry</p>
       <p className="text-white/60">session 0x8f2a</p>
       <p>
-        <span className="text-white/60">utc </span>
+        <span className="text-white/60">cot&nbsp;</span>
         <span className="text-white">{time}</span>
       </p>
     </div>
