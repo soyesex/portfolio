@@ -23,7 +23,7 @@ export default function HudTopRight() {
   }, []);
 
   return (
-    <div className="absolute top-8 right-8 z-10 text-right font-mono text-[11px] uppercase leading-loose">
+    <div className="text-right font-mono text-[9px] md:text-[11px] uppercase leading-loose self-end md:self-auto">
       <p className="text-white/60">system telemetry</p>
       <p className="text-white/60">session 0x8f2a</p>
       <p>

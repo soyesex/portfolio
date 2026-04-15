@@ -12,10 +12,9 @@ export default function HudStatement() {
   const t = copy[lang];
 
   return (
-    <div className="absolute bottom-12 left-8 z-10 max-w-2xl">
+    <div className="max-w-[280px] sm:max-w-md md:max-w-2xl">
       <h1
-        className="font-sans font-semibold text-white leading-[0.95] tracking-[-0.03em]"
-        style={{ fontSize: "clamp(56px, 8vw, 96px)" }}
+        className="font-sans font-semibold text-white leading-[0.95] tracking-[-0.03em] text-5xl md:text-7xl lg:text-9xl"
       >
         {t.line1}
         <br />

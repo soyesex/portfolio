@@ -143,7 +143,7 @@ export default function Terminal() {
 
   // ── Render ───────────────────────────────────────────────────
   return (
-    <div className="absolute bottom-12 right-8 z-20 hidden md:flex w-[420px] h-[360px] backdrop-blur-xl bg-[rgba(0,0,0,0.85)] border border-white/[0.15] p-5 font-mono text-[13px] flex-col">
+    <div className="flex w-full md:w-[420px] h-[220px] md:h-[360px] backdrop-blur-xl bg-[rgba(0,0,0,0.85)] border border-white/[0.15] p-4 md:p-5 font-mono text-[12px] md:text-[13px] flex-col shrink-0">
 
       {/* Header */}
       <div className="flex justify-between text-white/60 text-[10px] pb-2 mb-4 border-b border-white/15">

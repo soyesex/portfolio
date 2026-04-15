@@ -6,7 +6,7 @@ export default function HudTopLeft() {
   const { lang, toggle } = useLang();
 
   return (
-    <div className="absolute top-8 left-8 z-10 font-mono text-[11px] uppercase leading-loose text-white/60">
+    <div className="font-mono text-[9px] md:text-[11px] uppercase leading-loose text-white/60">
       <p>Johan Suarez / SDET &amp; Full Stack Dev</p>
       <p>Bogotá, Colombia</p>
       <button
