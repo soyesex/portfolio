@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         {/* Contact links */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-24">
+        <div className="flex flex-col md:flex-row gap-4 mb-20 md:mb-24">
           {contacts.map(({ id, label, href, Icon }) => (
             <a
               key={id}
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-8 border-t border-white/[0.06]">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-4 pt-8 border-t border-white/[0.06]">
           <span
             className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/20"
             style={{ fontFamily: "var(--font-space-grotesk, var(--font-sans))" }}
