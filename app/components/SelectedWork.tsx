@@ -27,8 +27,8 @@ const projects: BilingualProject[] = [
       en: "AI · Full-stack · Production",
     },
     description: {
-      es: "Plataforma fitness premium con IA generativa. Planes de entrenamiento adaptativos, RAG sobre biblioteca de ejercicios y sistema de gamificación para retención de usuarios.",
-      en: "Premium fitness platform with generative AI. Adaptive training plans, RAG over an exercise library, and a gamification system for user retention.",
+      es: "Plataforma fitness full-stack con IA generativa. Planes de entrenamiento adaptativos, RAG sobre biblioteca de ejercicios y sistema de gamificación para retención de usuarios.",
+      en: "Full-stack fitness platform with generative AI. Adaptive training plans, RAG over an exercise library, and a gamification system for user retention.",
     },
     stack: ["Next.js 15", "Supabase", "Gemini", "TypeScript"],
     accent: "#39FF14",

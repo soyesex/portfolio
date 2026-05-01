@@ -1,15 +1,41 @@
 # Johan Suarez — Portfolio
 
-A personal portfolio built to feel like a mission control interface.  
-3D moon, aerospace HUD, AI-powered terminal, and three real projects.
+Personal site and engineering portfolio. Aerospace-inspired HUD interface with a 3D moon, an AI-powered terminal, and three production-grade projects.
 
-**Come see it live** → _deploying soon_
+**Live site** — deploying soon
 
----
-
-Built with Next.js 15 · React Three Fiber · Tailwind CSS · Gemini AI
+![Portfolio screenshot — coming soon](screenshot-placeholder)
 
 ---
+
+## What's inside
+
+- Real-time 3D moon rendered with React Three Fiber and NASA textures, parallax-tracked to the cursor
+- Interactive terminal powered by Gemini 2.5 Flash with conversation history and automatic lite-model fallback
+- Three featured projects spanning full-stack web, QA automation, and desktop ERP
+- Bilingual UI with automatic browser-language detection and manual ES/EN toggle
+- Live COT clock in the hero section
+- Aerospace mission-control aesthetic: dark background, Geist + Space Grotesk typography, HUD-style layout
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 |
+| Language | TypeScript |
+| 3D | React Three Fiber, Three.js |
+| Styling | Tailwind CSS v4 |
+| AI | Gemini 2.5 Flash (with lite fallback) |
+| Fonts | Geist, Space Grotesk |
+| Deploy | Vercel |
+
+## Projects showcased
+
+| Project | Stack | Repo |
+|---|---|---|
+| GYM-AI | Next.js 15, Supabase, Gemini, RAG, PWA, i18n | [soyesex/gym-ai](https://github.com/soyesex/gym-ai) |
+| Playwright QA Suite | Playwright, TypeScript, GitHub Actions, Supabase local | [soyesex/playwright-qa-suite](https://github.com/soyesex/playwright-qa-suite) |
+| Deluxe Cars | C#, WPF, SQL Server | [soyesex/deluxe-cars](https://github.com/soyesex/deluxe-cars) |
 
 ## Local development
 
