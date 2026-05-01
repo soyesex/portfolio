@@ -27,12 +27,12 @@ const footerCopy: Record<Lang, {
   es: {
     label: "003\u00a0/\u00a0Contacto",
     heading: "Conectemos.",
-    tagline: "QA Engineer · Testing con IA · Bogotá, CO",
+    tagline: "QA Automation · Full Stack Dev · Bucaramanga, CO",
   },
   en: {
     label: "003\u00a0/\u00a0Contact",
     heading: "Let\u2019s connect.",
-    tagline: "QA Engineer · AI-driven testing · Bogotá, CO",
+    tagline: "QA Automation · Full Stack Dev · Bucaramanga, CO",
   },
 };
 

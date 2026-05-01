@@ -7,7 +7,7 @@ export default function HudTopLeft() {
 
   return (
     <div className="font-mono text-[9px] md:text-[11px] uppercase leading-loose text-white/60">
-      <p>Johan Suarez / SDET &amp; Full Stack Dev</p>
+      <p>Johan Suarez / QA Automation · Full Stack Dev</p>
       <p>Bogotá, Colombia</p>
       <button
         onClick={toggle}
