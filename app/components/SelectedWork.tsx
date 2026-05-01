@@ -51,7 +51,6 @@ const projects: BilingualProject[] = [
     accent: "#3B82F6",
     accentRgb: "59, 130, 246",
     href: "https://github.com/soyesex/gym-ai-e2e-suite",
-    comingSoon: true,
   },
   {
     id: "deluxe-cars",
