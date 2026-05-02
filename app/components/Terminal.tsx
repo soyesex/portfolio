@@ -55,7 +55,7 @@ export default function Terminal() {
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
-  const [tip, setTip] = useState<string | null>(null);
+  const [showTip, setShowTip] = useState(false);
 
   // Ref to scroll the messages container — NOT scrollIntoView (that moves the page)
   const messagesContainerRef = useRef<HTMLDivElement>(null);
@@ -76,7 +76,7 @@ export default function Terminal() {
   useEffect(() => {
     tipTimerRef.current = setTimeout(() => {
       if (!hasInteractedRef.current) {
-        setTip(copy[langRef.current].tip);
+        setShowTip(true);
       }
     }, 5000);
     return () => { if (tipTimerRef.current) clearTimeout(tipTimerRef.current); };
@@ -86,12 +86,12 @@ export default function Terminal() {
   useEffect(() => {
     const el = messagesContainerRef.current;
     if (el) el.scrollTop = el.scrollHeight;
-  }, [messages, tip]);
+  }, [messages, showTip]);
 
   // ── Handlers ─────────────────────────────────────────────────
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setInputValue(e.target.value);
-    if (e.target.value.length > 0 && tip) setTip(null);
+    if (e.target.value.length > 0 && showTip) setShowTip(false);
   }
 
   async function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
@@ -100,7 +100,7 @@ export default function Terminal() {
     const userText = inputValue.trim();
     setInputValue("");
     setIsLoading(true);
-    setTip(null);
+    setShowTip(false);
     hasInteractedRef.current = true;
     if (tipTimerRef.current) clearTimeout(tipTimerRef.current);
 
@@ -171,8 +171,8 @@ export default function Terminal() {
           </p>
         ))}
 
-        {tip && (
-          <p className="tip-blink text-white/35 italic mt-2">{tip}</p>
+        {showTip && (
+          <p className="tip-blink text-white/35 italic mt-2">{t.tip}</p>
         )}
       </div>
 
